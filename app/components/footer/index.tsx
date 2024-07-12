@@ -14,8 +14,8 @@ const Footer = () => {
             </div>
         </div>
         <div className='flex gap-8'>
-            <Image src="/logo-usep.png" alt="Logo of USeP" width={70} height={70} />
-            <Image src="/logo-cic.png" alt="Logo of CiC" width={70} height={70} />
+            <Image src="/Usep_Logo.png" alt="Logo of USeP" width={70} height={70} />
+            <Image src="/CIC_Logo.png" alt="Logo of CiC" width={70} height={70} />
         </div>
       </div>
     </footer>

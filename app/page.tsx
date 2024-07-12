@@ -7,7 +7,7 @@ import Card from './components/card';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between overscroll-auto">
+    <main className="flex flex-col items-center justify-between overscroll-y-auto">
       <section className={`${styles.hero} flex bg-[url('../public/heroCover.jpg')] bg-cover bg-center w-full h-screen items-center px-[20px] sm:max-2xl:px-[6.25%] 2xl:px-[12.5%]`}>
         <div className="flex grow flex-col gap-36 sm:gap-20">
           <div className="flex flex-col justify-center items-center gap-8 self-stretch">

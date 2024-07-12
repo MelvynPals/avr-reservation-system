@@ -10,7 +10,7 @@ const links = [
 ];
 
 interface NavlinksProps {
-  onClick: () => void; // Add this line
+  onClick: () => void;
 }
 
 const Navlinks: React.FC<NavlinksProps> = ({ onClick }) => {
@@ -19,7 +19,7 @@ const Navlinks: React.FC<NavlinksProps> = ({ onClick }) => {
   return (
     <>
       {links.map((link) => (
-        <Link  href={link.href} key={link.href} onClick={onClick} className={`${pathname === link.href ? "text-accentPrimary" : "text-mainText"} hover:text-accentPrimaryHover font-bold p-4`}>
+        <Link href={link.href} key={link.href} onClick={onClick} className={`${pathname === link.href ? "text-accentPrimary" : "text-mainText"} hover:text-accentPrimaryHover font-bold p-4`}>
           {link.label}
         </Link>
       ))}
