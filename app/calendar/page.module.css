@@ -13,3 +13,7 @@
 .calendarBg>* {
     z-index: 5;
 }
+
+.wave {
+    width: clamp(145px, 35vw, 579px);
+}

@@ -6,7 +6,7 @@ import Link from 'next/link';
 const links = [
   { href: "/", label: "Home" },
   { href: "/calendar", label: "Calendar" },
-  { href: "/preview", label: "Preview" },
+  // { href: "/preview", label: "Preview" },
 ];
 
 interface NavlinksProps {

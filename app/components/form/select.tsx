@@ -2,20 +2,16 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
+// import { useEffect } from 'react';
 
 interface Selectrops {
   htmlFor: string;
   label: string;
   required?: boolean;
   disabled?: boolean;
+  data: { value: string, label: string }[];
+  optionDefault: string;
 }
-const options = [
-  { value: 'Option 1', label: 'Option 1' },
-  { value: 'Option 2', label: 'Option 2' },
-  { value: 'Option 3', label: 'Option 3' },
-  { value: 'Option 4', label: 'Option 4' },
-  { value: 'Option 5', label: 'Option 5' }
-]
 
 const previewLink = '/preview'
 
@@ -23,10 +19,16 @@ export const Select: React.FC<Selectrops> = ({
   htmlFor = '',
   label = '',
   required = true,
-  disabled
+  disabled,
+  data = [],
+  optionDefault
 }) => {
   const currentLink = usePathname();
   disabled = currentLink === previewLink;
+
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
 
   return (
     <div className='flex flex-col justify-center items-start gap-2 w-full'>
@@ -39,9 +41,9 @@ export const Select: React.FC<Selectrops> = ({
         id={htmlFor}
         required={required}
         disabled={disabled}>
-        <option value='' selected disabled className='bg-mainBG'>- - Purpose of Request - -</option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value} className='bg-mainBG'>{option.label}</option>
+        <option value='' selected disabled className='bg-mainBG'>{optionDefault}</option>
+        {data.map((data) => (
+          <option key={data.value} value={data.value} className='bg-mainBG'>{data.label}</option>
         ))}
       </select>
     </div>

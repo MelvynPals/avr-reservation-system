@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import ButtonHero from "./components/buttons/hero";
 import Card from './components/card';
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex flex-col items-center justify-between overscroll-y-auto">
       <section className={`${styles.hero} flex bg-[url('../public/heroCover.jpg')] bg-cover bg-center w-full h-screen items-center px-[20px] sm:max-2xl:px-[6.25%] 2xl:px-[12.5%]`}>
